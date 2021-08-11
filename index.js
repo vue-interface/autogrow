@@ -111,6 +111,10 @@ function init(el, binding, vnode) {
 export default {
     
     inserted(el, binding, vnode) {
+        if(binding.value === false) {
+            return;
+        }
+        
         init(el, binding, vnode);
         
         el.resize = function() {

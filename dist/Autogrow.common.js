@@ -2106,6 +2106,10 @@ function init(el, binding, vnode) {
 
 /* harmony default export */ var index = ({
   inserted: function inserted(el, binding, vnode) {
+    if (binding.value === false) {
+      return;
+    }
+
     init(el, binding, vnode);
 
     el.resize = function () {
