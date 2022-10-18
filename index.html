@@ -47,15 +47,14 @@
             </textarea>
         </form>
 
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
-        <script type="text/javascript" src="./dist/Autogrow.umd.js"></script>
-        <script type="text/javascript">
-            const vue = new Vue({
-                el: '#app',
-                directives: {
-                    Autogrow
-                }
-            });
+        <script type="module">
+            import { createApp } from 'vue/dist/vue.esm-bundler';
+            import { Autogrow } from './index.js';
+              
+            const vue = createApp({
+            })
+            .directive('autogrow', Autogrow)
+            .mount('#app');
         </script>
     </body>
 </html>
