@@ -1,12 +1,11 @@
 module.exports = {
     extends: [
         'plugin:vue/vue3-recommended',
-        '@vue/eslint-config-typescript'
     ],
     rules: {
-        "vue/component-tags-order": ["error", {
-            "order": [ [ "script", "template" ], "style" ]
-        }]
+        // "vue/component-tags-order": ["error", {
+        //     "order": [ [ "script", "template" ], "style" ]
+        // }]
         // 'vue/first-attribute-linebreak': ['error', {
         //     singleline: 'ignore',
         //     multiline: 'below'

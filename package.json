@@ -36,9 +36,6 @@
     "url": "https://github.com/vue-interface/autogrow/issues"
   },
   "homepage": "https://github.com/vue-interface/autogrow",
-  "dependencies": {
-    "core-js": "^3.6.0"
-  },
   "peerDependencies": {
     "vue": "^3.0.0"
   },
