@@ -11,12 +11,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "pre-release": "npm run build; git add . -A; git commit -m 'pre-release commit'",
-    "release-patch": "npm run pre-release && npm version patch -m \"%s\" && npm run release;",
-    "release-minor": "npm run pre-release && npm version minor -m \"%s\" && npm run release;",
-    "release-major": "npm run pre-release && npm version major -m \"%s\" && npm run release;",
-    "release": "git add . -A; git commit; git push --tags origin; npm publish;"
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -40,17 +35,15 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-babel": "^6.0.0",
     "@vitejs/plugin-vue": "^3.1.2",
+    "@vue-interface/eslint-config": "1.0.0-beta.0",
     "autoprefixer": "^10.4.2",
-    "babel-eslint": "^10.1.0",
-    "babel-preset-vue": "^2.0.2",
     "change-case": "^4.1.2",
     "eslint": "^8.25.0",
-    "eslint-plugin-vue": "^9.6.0",
     "pascalcase": "^2.0.0",
     "postcss": "^8.4.6",
     "tailwindcss": "^3.0.18",
+    "typescript": "^4.9.5",
     "vite": "^3.1.7",
     "vue": "^3.2.40"
   }
