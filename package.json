@@ -8,12 +8,10 @@
   "type": "module",
   "main": "./dist/autogrow.umd.cjs",
   "module": "./dist/autogrow.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/autogrow.js",
-      "require": "./dist/autogrow.umd.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/.umd.cjs"
     }
   },
   "scripts": {
