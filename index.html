@@ -51,10 +51,9 @@
             import { createApp } from 'vue/dist/vue.esm-bundler';
             import { Autogrow } from './index';
               
-            const vue = createApp({
-            })
-            .directive('autogrow', Autogrow)
-            .mount('#app');
+            const vue = createApp()
+                .directive('autogrow', Autogrow)
+                .mount('#app');
         </script>
     </body>
 </html>

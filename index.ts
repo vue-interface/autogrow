@@ -1,5 +1,5 @@
-import Autogrow from './src/Autogrow';
+import Autogrow from './src/Autogrow.js';
 
 export {
-    Autogrow
+Autogrow
 };

@@ -22,11 +22,11 @@ const STYLE_ATTRIBUTES: string[] = [
     'textDecorationStyle',
     'textDecorationColor',
     'textDecorationSkipInk',
-    'textDecorationPosition',
+    // 'textDecorationPosition',
     'textIndent',
     'textRendering',
     'textShadow',
-    'textSizeAdjust',
+    // 'textSizeAdjust',
     'textOverflow',
     'textTransform',
     'width',
@@ -75,29 +75,32 @@ function height(el: HTMLElement): number {
     return int(style(el, 'height'));
 }
   
-function style(el: HTMLElement, attr: string): string {
+function style(el: HTMLElement, attr: keyof CSSStyleDeclaration) {
     return window.getComputedStyle(el)[attr];
 }
   
-function mimic(el: HTMLElement, minHeight: number): HTMLElement {
+function mimic(el: HTMLElement): HTMLElement {
     const div = document.createElement('div');
     const styles = window.getComputedStyle(el);
   
     div.style.position = 'absolute';
     div.style.zIndex = '-1';
     div.style.visibility = 'hidden';
-    // div.style.minHeight = `${minHeight}px`;
     
     el.parentNode!.insertBefore(div, el.nextSibling);
   
-    STYLE_ATTRIBUTES.forEach(key => div.style[key] = styles[key]);
+    STYLE_ATTRIBUTES.forEach(key => {
+        if(key in div.style) {
+            div.style[key as any] = styles[key as any];
+        }
+    });
   
     return div;
 }
   
-function init(el: HTMLInputElement, binding: any, vnode: any): void {
+function init(el: HTMLInputElement, binding: any): void {
     const minHeight = height(el);
-    const div = mimic(el, minHeight);
+    const div = mimic(el);
     const maxHeight = binding.value !== true ? binding.value : 0;
   
     el.addEventListener('input', event => {
@@ -113,9 +116,9 @@ export default {
             return;
         }
       
-        init(el, binding, vnode);
+        init(el, binding);
       
-        el.resize = function() {
+        el.onresize = function() {
             vnode.context.$nextTick(() => {
                 el.dispatchEvent(new Event('input'));
             });
