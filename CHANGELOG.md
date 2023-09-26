@@ -1,3 +1,10 @@
+# [1.0.0-beta.7](https://github.com/vue-interface/autogrow/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2023-09-26)
+
+
+### Bug Fixes
+
+* updated export name to reflect vue3 standards ([0e1e8e8](https://github.com/vue-interface/autogrow/commit/0e1e8e84caef0d87e106a9527e39492958f62054))
+
 # [1.0.0-beta.6](https://github.com/vue-interface/autogrow/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2023-09-26)
 
 
