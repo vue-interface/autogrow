@@ -66,6 +66,7 @@ function input(div: HTMLElement, el: HTMLInputElement, minHeight: number, maxHei
         dynamicHeight += int(style(el, 'lineHeight'));
     }
   
+    el.style.overflow = 'hidden';
     el.style.height = (
         (!maxHeight || dynamicHeight < maxHeight) ? dynamicHeight : maxHeight
     ) + 'px';
@@ -86,6 +87,7 @@ function mimic(el: HTMLElement): HTMLElement {
     div.style.position = 'absolute';
     div.style.zIndex = '-1';
     div.style.visibility = 'hidden';
+    div.style.top = 0;
     
     el.parentNode!.insertBefore(div, el.nextSibling);
   
