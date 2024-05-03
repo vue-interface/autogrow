@@ -1,3 +1,10 @@
+# [1.0.0-beta.8](https://github.com/vue-interface/autogrow/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2024-05-03)
+
+
+### Bug Fixes
+
+* placement of mimic element ([f7e6128](https://github.com/vue-interface/autogrow/commit/f7e6128750e7f0f35e63609816b451cd99d2d51a))
+
 # [1.0.0-beta.7](https://github.com/vue-interface/autogrow/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2023-09-26)
 
 
