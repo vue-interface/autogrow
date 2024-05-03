@@ -87,7 +87,7 @@ function mimic(el: HTMLElement): HTMLElement {
     div.style.position = 'absolute';
     div.style.zIndex = '-1';
     div.style.visibility = 'hidden';
-    div.style.top = 0;
+    div.style.top = '0px';
     
     el.parentNode!.insertBefore(div, el.nextSibling);
   
