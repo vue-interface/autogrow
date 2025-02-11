@@ -14,6 +14,10 @@
 
             <textarea v-autogrow rows="6" class="form-control"></textarea>
 
+            <h3>Resize on Update</h3>
+
+            <textarea v-model="value" v-autogrow rows="2" class="form-control"></textarea>
+
             <hr>
 
             <h3>With long existing content</h3>
@@ -49,10 +53,22 @@
 
         <script type="module">
             import { createApp } from 'vue/dist/vue.esm-bundler';
-            import { Autogrow } from './index';
+            import { vAutogrow } from './index';
               
-            const vue = createApp()
-                .directive('autogrow', Autogrow)
+            const vue = createApp({
+                data() {
+                    return {
+                        value: 'Initial value.'
+                    };
+                },
+                mounted() {
+                    setTimeout(() => {
+                        console.log('timeout')
+                        this.value += '\n\n\n Adding some text for resize...'
+                    }, 1000)
+                }
+            })
+                .directive('autogrow', vAutogrow)
                 .mount('#app');
         </script>
     </body>

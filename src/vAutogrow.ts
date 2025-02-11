@@ -1,3 +1,5 @@
+import { nextTick } from "vue";
+
 const STYLE_ATTRIBUTES: string[] = [
     'font',
     'fontFamily',
@@ -120,10 +122,10 @@ export default {
       
         init(el, binding);
       
-        el.onresize = function() {
-            vnode.context.$nextTick(() => {
+        el.addEventListener("resize", () => {
+            nextTick(() => {
                 el.dispatchEvent(new Event('input'));
             });
-        };
+        })
     }
 };
