@@ -1,3 +1,10 @@
+# [1.0.0-beta.9](https://github.com/vue-interface/autogrow/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2025-02-11)
+
+
+### Bug Fixes
+
+* fix issue with element not resizing on the resize event ([349c891](https://github.com/vue-interface/autogrow/commit/349c8911e3e8d1543ed47c7399be041951e9f4f3))
+
 # [1.0.0-beta.8](https://github.com/vue-interface/autogrow/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2024-05-03)
 
 
